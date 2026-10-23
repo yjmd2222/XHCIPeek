@@ -1,0 +1,202 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		A10000000000000000000001 /* Project */ = {
+			isa = PBXProject;
+			attributes = { LastUpgradeCheck = 1500; };
+			buildConfigurationList = A10000000000000000000010;
+			compatibilityVersion = "Xcode 14.0";
+			mainGroup = A10000000000000000000002;
+			productRefGroup = A10000000000000000000003;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A10000000000000000000004);
+		};
+		A10000000000000000000002 /* Main group */ = {
+			isa = PBXGroup;
+			children = (A10000000000000000000020, A10000000000000000000021, A10000000000000000000003);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			children = (A10000000000000000000006);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000004 /* XHCIPeek target */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000011;
+			buildPhases = (A10000000000000000000007, A10000000000000000000008);
+			buildRules = ();
+			dependencies = ();
+			name = XHCIPeek;
+			productName = XHCIPeek;
+			productReference = A10000000000000000000006;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		A10000000000000000000006 /* XHCIPeek.kext */ = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.kext;
+			includeInIndex = 0;
+			path = XHCIPeek.kext;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A10000000000000000000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (A10000000000000000000031, A10000000000000000000032);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000010 /* Project configurations */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A10000000000000000000012, A10000000000000000000013);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A10000000000000000000011 /* Target configurations */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A10000000000000000000014, A10000000000000000000015);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A10000000000000000000012 /* Project Debug */ = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				ARCHS = x86_64;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_CXX_LANGUAGE_STANDARD = "gnu++14";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				"GCC_ENABLE_KERNEL_DEVELOPMENT[arch=x86_64]" = YES;
+				SDKROOT = macosx;
+			};
+		};
+		A10000000000000000000013 /* Project Release */ = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				ARCHS = x86_64;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_CXX_LANGUAGE_STANDARD = "gnu++14";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				"GCC_ENABLE_KERNEL_DEVELOPMENT[arch=x86_64]" = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				SDKROOT = macosx;
+			};
+		};
+		A10000000000000000000014 /* Target Debug */ = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_IDENTITY = "-";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				GCC_PREPROCESSOR_DEFINITIONS = ("PRODUCT_NAME=XHCIPeek", "DEBUG=1");
+				INFOPLIST_FILE = XHCIPeek/Info.plist;
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MODULE_NAME = org.yjmd2222.XHCIPeek;
+				MODULE_START = XHCIPeek_start;
+				MODULE_STOP = XHCIPeek_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.yjmd2222.XHCIPeek;
+				PRODUCT_NAME = XHCIPeek;
+				WRAPPER_EXTENSION = kext;
+			};
+		};
+		A10000000000000000000015 /* Target Release */ = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_IDENTITY = "-";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				GCC_PREPROCESSOR_DEFINITIONS = ("PRODUCT_NAME=XHCIPeek");
+				GCC_OPTIMIZATION_LEVEL = s;
+				INFOPLIST_FILE = XHCIPeek/Info.plist;
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MODULE_NAME = org.yjmd2222.XHCIPeek;
+				MODULE_START = XHCIPeek_start;
+				MODULE_STOP = XHCIPeek_stop;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.yjmd2222.XHCIPeek;
+				PRODUCT_NAME = XHCIPeek;
+				WRAPPER_EXTENSION = kext;
+			};
+		};
+		A10000000000000000000020 /* XHCIPeek group */ = {
+			isa = PBXGroup;
+			children = (A10000000000000000000022, A10000000000000000000023, A10000000000000000000024, A10000000000000000000025);
+			path = XHCIPeek;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000021 /* Root docs */ = {
+			isa = PBXGroup;
+			children = (A10000000000000000000026, A10000000000000000000027);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000022 /* XHCIPeek.cpp */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = XHCIPeek.cpp;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000023 /* ControllerRings.cpp */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = ControllerRings.cpp;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000024 /* XHCIPeek.hpp */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			path = XHCIPeek.hpp;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000025 /* Info.plist */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000026 /* README.md */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = README.md;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000027 /* LICENSE */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = LICENSE;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000031 /* XHCIPeek.cpp in Sources */ = {
+			isa = PBXBuildFile;
+			fileRef = A10000000000000000000022;
+		};
+		A10000000000000000000032 /* ControllerRings.cpp in Sources */ = {
+			isa = PBXBuildFile;
+			fileRef = A10000000000000000000023;
+		};
+	};
+	rootObject = A10000000000000000000001;
+}

@@ -4,7 +4,7 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key><string>en</string>
 	<key>CFBundleExecutable</key><string>XHCIPeek</string>
-	<key>CFBundleIdentifier</key><string>org.local.XHCIPeek</string>
+	<key>CFBundleIdentifier</key><string>org.yjmd2222.XHCIPeek</string>
 	<key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
 	<key>CFBundleName</key><string>XHCIPeek</string>
 	<key>CFBundlePackageType</key><string>KEXT</string>
@@ -14,7 +14,7 @@
 	<dict>
 		<key>XHCIPeek</key>
 		<dict>
-			<key>CFBundleIdentifier</key><string>org.local.XHCIPeek</string>
+			<key>CFBundleIdentifier</key><string>org.yjmd2222.XHCIPeek</string>
 			<key>IOClass</key><string>XHCIPeek</string>
 			<key>IOProviderClass</key><string>IOResources</string>
 			<key>IOResourceMatch</key><string>IOKit</string>
