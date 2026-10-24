@@ -16,6 +16,10 @@ The event- and command-ring memory mappings are read-only. **The kext itself is 
 
 The capture can include device addresses and physical addresses from controller registers. Treat logs as hardware diagnostics.
 
+## OpenCore patch reference
+
+[`reference/OpenCore-Kernel-Patches.plist`](reference/OpenCore-Kernel-Patches.plist) contains the XHCI-related `Kernel > Patch` entries from the Samsung NP530U3B OpenCore config (SHA-256 `35b647adc80008ce9600857b8a80c8e2c1a9dfd16bfc14f5e24e0b64f60450c5`), checked against the live EFI on 2026-10-24. It is a filtered patch array for reference, not a complete OpenCore config. The enabled entries in that snapshot accept the ASM1042's xHCI 0.96 revision, work around its 64-bit PCI MMIO access behavior, and use a 256-TRB event-ring segment with matching 256-entry software dequeue wrap. Disabled entries preserve earlier experiments. These Apple-kext patches are separate from XHCIPeek; the kext does not apply them. Patch signatures are specific to the referenced macOS binaries and should be rechecked before reuse.
+
 ## Build
 
 Requires Xcode and the upstream Acidanthera MacKernelSDK. Clone the SDK beside the project:
